@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="5.0">
+    <name>com_hotelbooking</name>
+    <author>Sameer man shrestha</author>
+    <version>1.0.0</version>
+    <description>Hotel Room Booking System</description>
+
+    <namespace path="src">YourNamespace\Component\Hotelbooking</namespace>
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <administration>
+        <menu>Hotel Booking</menu>
+        <files folder="admin">
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>language</folder>
+        </files>
+    </administration>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+</extension>

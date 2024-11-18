@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" label="Room Details">
+        <field
+            name="id"
+            type="hidden"
+        />
+        
+        <field
+            name="title"
+            type="text"
+            label="Room Title"
+            description="Enter the room title"
+            class="input-xxlarge"
+            size="40"
+            required="true"
+        />
+
+        <field
+            name="alias"
+            type="text"
+            label="Alias"
+            description="URL-friendly name"
+            hint="Leave blank for automatic generation"
+        />
+
+        <field
+            name="description"
+            type="editor"
+            label="Description"
+            description="Detailed room description"
+            filter="JComponentHelper::filterText"
+            buttons="true"
+        />
+
+        <field
+            name="capacity"
+            type="number"
+            label="Room Capacity"
+            description="Maximum number of guests"
+            default="2"
+            min="1"
+            max="10"
+        />
+
+        <field
+            name="base_price"
+            type="number"
+            label="Base Price"
+            description="Room's base price per night"
+            step="0.01"
+            required="true"
+        />
+
+        <field
+            name="status"
+            type="list"
+            label="Room Status"
+            default="available"
+            >
+            <option value="available">Available</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="blocked">Blocked</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="images" label="Room Images">
+        <field
+            name="images"
+            type="file"
+            label="Room Images"
+            description="Upload room images"
+            multiple="true"
+            accept="image/*"
+        />
+    </fieldset>
+</form>
